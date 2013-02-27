@@ -170,4 +170,28 @@ public class EnrichCustomer {
   public void setCountry(String country) {
     this.country = country;
   }
+  
+  @Override
+  public String toString() {
+    final StringBuilder sb = new StringBuilder();
+    sb.append(EnrichCustomer.class.getSimpleName());
+    sb.append("={CustomerId: ");
+    sb.append(this.getCustomerId());
+    sb.append("| FirstName: ");
+    sb.append(this.getFirstName());
+    sb.append("| LastName: ");
+    sb.append(this.getLastName());
+    sb.append("| StreetName: ");
+    sb.append(this.getStreetName());
+    sb.append("| House: ");
+    sb.append(this.getHouse());
+    sb.append("| ZipCode: ");
+    sb.append(this.getZipCode());
+    sb.append("| City: ");
+    sb.append(this.getCity());
+    sb.append("| Country: ");
+    sb.append(this.getCountry());
+    sb.append('}');
+    return sb.toString();
+  }
 }
