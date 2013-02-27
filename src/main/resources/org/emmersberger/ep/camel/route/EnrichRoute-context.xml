@@ -10,7 +10,7 @@
   <!-- Discovering all route definitions in 'org.emmersberger.ep.camel.route' -->
   <context:component-scan base-package="org.emmersberger.ep.camel.route"/>
   
-  <!-- Creating the 'EventProcessingContext' that contains all route definitions injected via the component-scan -->
+  <!-- Creating the 'enrichContext' that contains all route definitions injected via the component-scan -->
   <camel:camelContext id="enrichContext">
     <camel:contextScan/>
   </camel:camelContext>

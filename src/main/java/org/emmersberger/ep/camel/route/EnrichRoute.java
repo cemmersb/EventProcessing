@@ -48,6 +48,7 @@ public class EnrichRoute extends SpringRouteBuilder {
 
   private void configureEnrichRoute() {
     from(DIRECT_START_AGGREGATE)
+        .to(LOG_AGGREGATE_ROUTE)
         // Creating a second exchange object that transports an event that can enrich the original event object
         .process(new Processor() {
       public void process(Exchange exchange) {
