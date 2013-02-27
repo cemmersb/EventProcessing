@@ -42,6 +42,7 @@ public class EnrichRoute extends SpringRouteBuilder {
 
   private void configureMainRoute() {
     from(DIRECT_START_ENRICH)
+        .to(LOG_ENRICH_ROUTE)
         .enrich(DIRECT_START_AGGREGATE, new EnrichAggregator())
         .to(LOG_ENRICH_ROUTE);
   }
