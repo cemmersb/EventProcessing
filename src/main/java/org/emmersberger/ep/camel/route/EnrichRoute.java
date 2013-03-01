@@ -24,7 +24,7 @@ public class EnrichRoute extends SpringRouteBuilder {
    * Endpoint configuration to start the aggregation route for the enrichment
    * pattern.
    */
-  public static final String DIRECT_START_AGGREGATE = "direct://start-aggregate";
+  public static final String DIRECT_START_ENRICHMENT = "direct://start-enrichment";
   /**
    * Endpoint configuration to log enrich route messages on INFO level.
    */
@@ -43,12 +43,12 @@ public class EnrichRoute extends SpringRouteBuilder {
   private void configureMainRoute() {
     from(DIRECT_START_ENRICH)
         .to(LOG_ENRICH_ROUTE)
-        .enrich(DIRECT_START_AGGREGATE, new EnrichAggregator())
+        .enrich(DIRECT_START_ENRICHMENT, new EnrichAggregator())
         .to(LOG_ENRICH_ROUTE);
   }
 
   private void configureEnrichRoute() {
-    from(DIRECT_START_AGGREGATE)
+    from(DIRECT_START_ENRICHMENT)
         .to(LOG_AGGREGATE_ROUTE)
         // Creating a second exchange object that transports an event that can enrich the original event object
         .process(new Processor() {
