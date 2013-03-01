@@ -48,9 +48,9 @@ public class TranslateConverter {
       aggregateProduct.setPrice(Double.parseDouble(
           xPath.evaluate("/Product/Price", document)));
     } catch (XPathExpressionException ex) {
-      LOGGER.error("");
+      LOGGER.error("Could not evaluate xPath Expression: '{}'", ex.getMessage());
     } catch (NumberFormatException ex) {
-      LOGGER.error("");
+      LOGGER.error("Unable to parse String into Double: '{}'", ex.getMessage());
     }
 
     return aggregateProduct;
