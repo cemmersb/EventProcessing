@@ -19,7 +19,6 @@ public class AggregateAggregator implements AggregationStrategy {
 
   public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
 
-    final AggregateProduct oldAggregateProduct = getAggregateProductFromExchange(oldExchange);
     final AggregateProduct newAggregateProduct = getAggregateProductFromExchange(newExchange);
 
     if (null != newAggregateProduct) {
