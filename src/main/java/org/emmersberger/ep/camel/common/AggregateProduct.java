@@ -13,7 +13,15 @@ public class AggregateProduct {
   private String name;
   private String description;
   private double price;
-
+  
+  public AggregateProduct() {}
+  
+  public AggregateProduct(String name, String description, double price) {
+    this.name = name;
+    this.description = description;
+    this.price = price;
+  }
+  
   /**
    * @return the name
    */
