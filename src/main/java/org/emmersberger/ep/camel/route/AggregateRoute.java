@@ -1,11 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.emmersberger.ep.camel.route;
 
-import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.emmersberger.ep.camel.aggregator.AggregateAggregator;
 import org.springframework.stereotype.Component;

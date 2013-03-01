@@ -27,11 +27,6 @@ public class AggregateAggregator implements AggregationStrategy {
         AGGREGATE_PRODUCTS.add(newAggregateProduct);
       }
     }
-//    if (null != oldAggregateProduct) {
-//      if (!AGGREGATE_PRODUCTS.contains(oldAggregateProduct)) {
-//        AGGREGATE_PRODUCTS.add(oldAggregateProduct);
-//      }
-//    }
 
     newExchange.getIn().setBody(calcAvgProductPrice());
     return newExchange;
