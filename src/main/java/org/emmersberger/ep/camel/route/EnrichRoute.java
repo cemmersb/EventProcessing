@@ -32,7 +32,7 @@ public class EnrichRoute extends SpringRouteBuilder {
   /**
    * Endpoint configuration to log aggregate route messages on INFO level.
    */
-  public static final String LOG_AGGREGATE_ROUTE = "log://aggregate-route?level=INFO";
+  public static final String LOG_AGGREGATE_ROUTE = "log://enrichment-route?level=INFO";
 
   @Override
   public void configure() {
