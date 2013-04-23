@@ -25,7 +25,7 @@ public class AggregateRouteTest {
   private final List<AggregateProduct> aggregateProducts = new ArrayList<AggregateProduct>();
   
   @Before
-  public void initializeEnrichCustomer() {
+  public void initializeAggregateProduct() {
     aggregateProducts.clear();
     aggregateProducts.add(new AggregateProduct("Small Parcel", "Max Size: 60x30x15, Max Weight: 2kg", 3.90));
     aggregateProducts.add(new AggregateProduct("Parcel", "Max Size: 120x60x60, Max Weight: 10kg", 4.90));
