@@ -32,7 +32,7 @@ public class EnrichRoute extends SpringRouteBuilder {
   /**
    * Endpoint configuration to log aggregate route messages on INFO level.
    */
-  public static final String LOG_AGGREGATE_ROUTE = "log://enrichment-route?level=INFO";
+  public static final String LOG_ENRICHMENT_ROUTE = "log://enrichment-route?level=INFO";
 
   @Override
   public void configure() {
@@ -49,7 +49,7 @@ public class EnrichRoute extends SpringRouteBuilder {
 
   private void configureEnrichRoute() {
     from(DIRECT_START_ENRICHMENT)
-        .to(LOG_AGGREGATE_ROUTE)
+        .to(LOG_ENRICHMENT_ROUTE)
         // Creating a second exchange object that transports an event that can enrich the original event object
         .process(new Processor() {
       public void process(Exchange exchange) {
@@ -60,6 +60,6 @@ public class EnrichRoute extends SpringRouteBuilder {
         exchange.getIn().setBody(enrichCustomers);
       }
     })
-        .to(LOG_AGGREGATE_ROUTE);
+        .to(LOG_ENRICHMENT_ROUTE);
   }
 }
