@@ -11,9 +11,7 @@ import org.emmersberger.ep.camel.common.EnrichCustomer;
  */
 public class EnrichAggregator implements AggregationStrategy {
   
-  /**
-   * TODO
-   */
+
   public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
     
     final EnrichCustomer originalCustomer = oldExchange.getIn().getBody(EnrichCustomer.class);
@@ -34,5 +32,4 @@ public class EnrichAggregator implements AggregationStrategy {
     oldExchange.getIn().setBody(originalCustomer);
     return oldExchange;
   }
-  
 }
