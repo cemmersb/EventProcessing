@@ -1,9 +1,10 @@
 package org.emmersberger.ep.camel.aggregator;
 
-import java.util.List;
+import org.apache.camel.AggregationStrategy;
 import org.apache.camel.Exchange;
-import org.apache.camel.processor.aggregate.AggregationStrategy;
 import org.emmersberger.ep.camel.common.EnrichCustomer;
+
+import java.util.List;
 
 /**
  *
